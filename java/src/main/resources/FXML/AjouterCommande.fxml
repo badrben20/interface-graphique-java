@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="643.0" prefWidth="854.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projet.badr.CommandPageController">
+   <children>
+      <Label layoutX="329.0" layoutY="22.0" prefHeight="35.0" prefWidth="364.0" styleClass="title" text="Commande" textFill="#1117fa">
+         <font>
+            <Font size="42.0" />
+         </font>
+      </Label>
+      <VBox layoutX="6.0" layoutY="146.0" prefHeight="74.0" prefWidth="280.0" spacing="30.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nom Client" wrappingWidth="109.294921875" />
+            <TextField fx:id="tfcli" prefHeight="53.0" prefWidth="280.0" />
+         </children>
+      </VBox>
+      <ButtonBar layoutX="388.0" layoutY="267.0" prefHeight="46.0" prefWidth="155.0" />
+      <VBox layoutX="304.0" layoutY="146.0" prefHeight="74.0" prefWidth="255.0" spacing="30.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Produit" wrappingWidth="123.501953125" />
+            <TextField fx:id="tfprod" prefHeight="17.0" prefWidth="255.0" />
+         </children>
+      </VBox>
+      <VBox layoutX="574.0" layoutY="146.0" prefHeight="94.0" prefWidth="255.0" spacing="30.0">
+         <children>
+            <Text layoutX="21.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantité" wrappingWidth="123.501953125" />
+            <TextField fx:id="tfqte" layoutX="21.0" layoutY="129.0" prefHeight="14.0" prefWidth="255.0" />
+         </children>
+      </VBox>
+      <Button fx:id="btnAddProd" layoutX="15.0" layoutY="343.0" mnemonicParsing="false" onAction="#onSaveButtonClick" prefHeight="43.0" prefWidth="162.0" style="-fx-background-color: linear-gradientound-color: to right,#FFFF00,#99FF33;" text="Ajouter">
+         <font>
+            <Font name="Apple SD GothicNeo ExtraBold" size="22.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.06666667014360428" green="0.09019608050584793" blue="0.9803921580314636" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9411764740943909" green="0.6627451181411743" blue="0.0470588244497776" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Button>
+      <Button fx:id="btnAddProd1" layoutX="196.0" layoutY="343.0" mnemonicParsing="false" onAction="#onUpdatebtnclick" prefHeight="43.0" prefWidth="162.0" style="-fx-background-color: linear-gradientound-color: to right,#FFFF00,#99FF33teal;" text="Modifier">
+         <font>
+            <Font name="Apple SD GothicNeo ExtraBold" size="22.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.06666667014360428" green="0.09019608050584793" blue="0.9803921580314636" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9411764740943909" green="0.6627451181411743" blue="0.0470588244497776" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Button>
+      <Button fx:id="btnAddProd11" layoutX="612.0" layoutY="343.0" mnemonicParsing="false" onAction="#onbtndeleteclick" prefHeight="17.0" prefWidth="162.0" style="-fx-background-color: linear-gradientound-color: to right,#FFFF00,#99FF33;" text="Clear">
+         <font>
+            <Font name="Apple SD GothicNeo ExtraBold" size="22.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.06666667014360428" green="0.09019608050584793" blue="0.9803921580314636" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9894737005233765" green="0.6959298253059387" blue="0.010994152165949345" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Button>
+      <Button layoutX="14.0" layoutY="25.0" mnemonicParsing="false" onAction="#toDashboard" prefHeight="55.0" prefWidth="164.0" style="-fx-background-color: wlinear-gradientound-color: to right,#FFFF00,#99FF33hite;" text="Retour">
+         <font>
+            <Font size="22.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.06666667014360428" green="0.09019608050584793" blue="0.9803921580314636" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9882352948188782" green="0.6941176652908325" blue="0.0117647061124444" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Button>
+      <ImageView fitHeight="39.0" fitWidth="47.0" layoutX="262.0" layoutY="34.0">
+         <image>
+            <Image url="@../Images/commande.png" />
+         </image>
+      </ImageView>
+      <VBox layoutX="6.0" layoutY="240.0" prefHeight="74.0" prefWidth="280.0" spacing="30.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Prix" wrappingWidth="109.294921875" />
+            <TextField fx:id="tfprix" prefHeight="53.0" prefWidth="280.0" />
+         </children>
+      </VBox>
+      <Button fx:id="btnAddProd111" layoutX="396.0" layoutY="342.0" mnemonicParsing="false" onAction="#onbtndeleteclick" prefHeight="46.0" prefWidth="162.0" style="-fx-background-color: tealinear-gradientound-color: to right,#FFFF00,#99FF33l;" text="Supprimer">
+         <font>
+            <Font name="Apple SD GothicNeo ExtraBold" size="22.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.06666667014360428" green="0.09019608050584793" blue="0.9803921580314636" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9411764740943909" green="0.6627451181411743" blue="0.0470588244497776" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Button>
+      <VBox layoutX="302.0" layoutY="240.0" prefHeight="74.0" prefWidth="249.0" spacing="30.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Date Commande" wrappingWidth="109.294921875" />
+            <DatePicker fx:id="tfdate" prefHeight="27.0" prefWidth="249.0" />
+         </children>
+      </VBox>
+      <VBox layoutX="570.0" layoutY="240.0" prefHeight="74.0" prefWidth="264.0" spacing="30.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ID Commande" wrappingWidth="109.294921875" />
+            <TextField fx:id="tfidcom" prefHeight="53.0" prefWidth="280.0" />
+         </children>
+      </VBox>
+      <TableView fx:id="mytab" layoutX="84.0" layoutY="425.0" onMouseClicked="#getData" prefHeight="188.0" prefWidth="657.0">
+         <columns>
+            <TableColumn fx:id="col_idcom" prefWidth="102.0" text="ID Command" />
+            <TableColumn fx:id="col_cli" prefWidth="112.0" text="Client" />
+            <TableColumn fx:id="Col_prod" prefWidth="126.0" text="Produit" />
+            <TableColumn fx:id="Col_prix" prefWidth="92.0" text="Prix" />
+            <TableColumn fx:id="Col_qte" prefWidth="105.0" text="Quantite" />
+            <TableColumn fx:id="Col_date" prefWidth="118.0" text="Date Command" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

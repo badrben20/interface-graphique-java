@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="644.0" prefWidth="803.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projet.badr.ProduitController">
+   <children>
+      <TableView fx:id="tbvProduct" layoutX="29.0" layoutY="346.0" onMouseClicked="#getData" prefHeight="283.0" prefWidth="370.0">
+         <columns>
+            <TableColumn fx:id="col_id" prefWidth="108.0" text="ID" />
+            <TableColumn fx:id="col_product_name" prefWidth="157.0" text="Nom Produit" />
+            <TableColumn fx:id="col_price" prefWidth="102.0" text="Prix" />
+         </columns>
+      </TableView>
+      <Button fx:id="btnAddProd" layoutX="6.0" layoutY="197.0" mnemonicParsing="false" onAction="#ajouterProduit" prefHeight="43.0" prefWidth="162.0" style="-fx-background-color: linear-gradientound-color: to right,#FFFF00,#99FF33;" text="Ajouter">
+         <font>
+            <Font name="Apple SD GothicNeo ExtraBold" size="22.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.06666667014360428" green="0.09019608050584793" blue="0.9803921580314636" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9411764740943909" green="0.6627451181411743" blue="0.0470588244497776" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Button>
+      <Button fx:id="btnAddProd1" layoutX="180.0" layoutY="196.0" mnemonicParsing="false" onAction="#modifierProduit" prefHeight="43.0" prefWidth="162.0" style="-fx-background-color: linear-gradientound-color: to right,#FFFF00,#99FF33teal;" text="Modifier">
+         <font>
+            <Font name="Apple SD GothicNeo ExtraBold" size="22.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.06666667014360428" green="0.09019608050584793" blue="0.9803921580314636" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9411764740943909" green="0.6627451181411743" blue="0.0470588244497776" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Button>
+      <Button fx:id="btnAddProd111" layoutX="359.0" layoutY="196.0" mnemonicParsing="false" onAction="#supprimerProduit" prefHeight="46.0" prefWidth="162.0" style="-fx-background-color: tealinear-gradientound-color: to right,#FFFF00,#99FF33l;" text="Supprimer">
+         <font>
+            <Font name="Apple SD GothicNeo ExtraBold" size="22.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.06666667014360428" green="0.09019608050584793" blue="0.9803921580314636" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9411764740943909" green="0.6627451181411743" blue="0.0470588244497776" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Button>
+      <Button fx:id="btnAddProd11" layoutX="553.0" layoutY="197.0" mnemonicParsing="false" onAction="#clearfield" prefHeight="17.0" prefWidth="162.0" style="-fx-background-color: linear-gradientound-color: to right,#FFFF00,#99FF33;" text="Clear">
+         <font>
+            <Font name="Apple SD GothicNeo ExtraBold" size="22.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.06666667014360428" green="0.09019608050584793" blue="0.9803921580314636" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9894737005233765" green="0.6959298253059387" blue="0.010994152165949345" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Button>
+      <Button layoutX="5.0" layoutY="22.0" mnemonicParsing="false" onAction="#toDashboard" prefHeight="55.0" prefWidth="164.0" style="-fx-background-color: wlinear-gradientound-color: to right,#FFFF00,#99FF33hite;" text="Retour">
+         <font>
+            <Font size="22.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.06666667014360428" green="0.09019608050584793" blue="0.9803921580314636" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9882352948188782" green="0.6941176652908325" blue="0.0117647061124444" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Button>
+      <TextField fx:id="txtproduct" layoutX="64.0" layoutY="122.0" />
+      <TextField fx:id="txtprice" layoutX="342.0" layoutY="122.0" />
+      <Text layoutX="65.0" layoutY="118.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom Produit" />
+      <Text layoutX="342.0" layoutY="110.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prix" wrappingWidth="87.306640625" />
+      <Text fill="#061ef7" layoutX="329.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Produit" wrappingWidth="222.75390625">
+         <font>
+            <Font size="42.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="39.0" fitWidth="49.0" layoutX="275.0" layoutY="39.0">
+         <image>
+            <Image url="@../Images/product.jpg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
